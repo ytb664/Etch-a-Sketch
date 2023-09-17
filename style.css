@@ -8,7 +8,7 @@ div {
     flex-flow: row wrap;
 }
 
-.square {
+.row {
     height: 50px;
     width: 50px;
     display: flex;

@@ -5,13 +5,19 @@ div {
 
 .container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    gap: 5px;
 }
 
 .row {
+    height: 50px * 16;
+    width: 50px * 16;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
     height: 50px;
     width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

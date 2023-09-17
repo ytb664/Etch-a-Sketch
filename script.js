@@ -9,9 +9,4 @@ for (let i = 0; i < 16; i++) {
         square.textContent = `j: ${j}`;
         container.appendChild(square);    
     }
-
-    const square = document.createElement('div');
-    square.classList.add('square');
-    square.textContent = `i: ${i}`;
-    container.appendChild(square);
 }

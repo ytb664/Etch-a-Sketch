@@ -13,3 +13,11 @@ for (let i = 0; i < 16; i++) {
         row.appendChild(column);    
     }
 }
+
+const selected = document.querySelectorAll('.column');
+
+for (let i = 0; i < selected.length; i++) {
+    selected[i].addEventListener('mouseover', () => {
+        selected[i].classList.toggle('colored');
+    })
+}

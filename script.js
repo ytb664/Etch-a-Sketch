@@ -1,5 +1,7 @@
 const container = document.querySelector('.container');
+const selected = document.querySelectorAll('.column');
 
+// Create the box
 for (let i = 0; i < 16; i++) {
 
     const row = document.createElement('div');
@@ -14,10 +16,9 @@ for (let i = 0; i < 16; i++) {
     }
 }
 
-const selected = document.querySelectorAll('.column');
-
+// Coloring logic
 for (let i = 0; i < selected.length; i++) {
     selected[i].addEventListener('mouseover', () => {
-        selected[i].classList.toggle('colored');
+        selected[i].classList.add('colored');
     })
 }

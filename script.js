@@ -7,7 +7,7 @@ btn.classList.add('btn');
 btn.textContent = "Click to Change Grid Number";
 body.insertBefore(btn, container);
 
-createGrid(prompt());
+createGrid(16);
 
 // Create the box
 function createGrid(gridNumber) {
@@ -34,3 +34,11 @@ for (let i = 0; i < selected.length; i++) {
         selected[i].classList.add('colored');
     })
 }
+
+btn.addEventListener('click', () => {
+    
+    const theRow = document.querySelectorAll('.row');
+    for (let i = 0; i < theRow.length; i++) {
+        theRow[i].remove();
+    }
+})

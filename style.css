@@ -22,15 +22,15 @@ body {
 
 .row {
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 auto;
     box-sizing: border-box;
 }
 
 .column {
     height: auto;
-    width: 20px;
+    width: auto;
+    flex: 1 1 auto;
     box-sizing: border-box;
-    flex-grow: 1;
 }
 
 .colored {

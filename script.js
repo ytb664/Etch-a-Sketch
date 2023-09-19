@@ -2,23 +2,31 @@ const body = document.querySelector('body');
 const container = document.querySelector('.container');
 const btn = document.createElement('button');
 
+// Insert button
 btn.classList.add('btn');
 btn.textContent = "Click to Change Grid Number";
-
 body.insertBefore(btn, container);
 
+createGrid(25);
+
+btn.addEventListener('click', () => {
+
+})
+
 // Create the box
-for (let i = 0; i < 16; i++) {
+function createGrid(gridNumber) {
+    for (let i = 0; i < gridNumber; i++) {
 
-    const row = document.createElement('div');
-    row.classList.add('row');
-    container.appendChild(row);
+        const row = document.createElement('div');
+        row.classList.add('row');
+        container.appendChild(row);
+        
+        for (let j = 0; j < gridNumber; j++) {
     
-    for (let j = 0; j < 16; j++) {
-
-        const column = document.createElement('div');
-        column.classList.add('column');
-        row.appendChild(column);    
+            const column = document.createElement('div');
+            column.classList.add('column');
+            row.appendChild(column);    
+        }
     }
 }
 

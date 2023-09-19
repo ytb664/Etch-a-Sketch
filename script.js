@@ -1,5 +1,13 @@
+const body = document.querySelector('body');
 const container = document.querySelector('.container');
+const btn = document.createElement('button');
 
+btn.classList.add('btn');
+btn.textContent = "Click to Change Grid Number";
+
+body.insertBefore(btn, container);
+
+// Create the box
 for (let i = 0; i < 16; i++) {
 
     const row = document.createElement('div');
@@ -16,6 +24,7 @@ for (let i = 0; i < 16; i++) {
 
 const selected = document.querySelectorAll('.column');
 
+// Coloring logic
 for (let i = 0; i < selected.length; i++) {
     selected[i].addEventListener('mouseover', () => {
         selected[i].classList.add('colored');

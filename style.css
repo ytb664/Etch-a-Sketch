@@ -1,3 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    height: 25px;
+    width: 395px;
+}
+
 .container {
     height: 395px;
     width: 395px;

@@ -3,6 +3,8 @@ const container = document.querySelector('.container');
 const selected = document.querySelectorAll('.column');
 const btn = document.createElement('button');
 
+body.insertBefore(btn, container);
+
 // Create the box
 for (let i = 0; i < 16; i++) {
 

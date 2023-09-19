@@ -1,5 +1,7 @@
+const body = document.querySelector('body');
 const container = document.querySelector('.container');
 const selected = document.querySelectorAll('.column');
+const btn = document.createElement('button');
 
 // Create the box
 for (let i = 0; i < 16; i++) {

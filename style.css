@@ -1,4 +1,5 @@
 .container {
+    height: 395px;
     width: 395px;
     display: flex;
     flex-flow: column wrap;

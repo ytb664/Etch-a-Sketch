@@ -3,6 +3,9 @@ const container = document.querySelector('.container');
 const selected = document.querySelectorAll('.column');
 const btn = document.createElement('button');
 
+btn.classList.add('btn');
+btn.textContent = "Click to Change Grid Number";
+
 body.insertBefore(btn, container);
 
 // Create the box

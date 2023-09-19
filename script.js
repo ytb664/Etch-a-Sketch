@@ -1,6 +1,5 @@
 const body = document.querySelector('body');
 const container = document.querySelector('.container');
-const selected = document.querySelectorAll('.column');
 const btn = document.createElement('button');
 
 btn.classList.add('btn');
@@ -22,6 +21,8 @@ for (let i = 0; i < 16; i++) {
         row.appendChild(column);    
     }
 }
+
+const selected = document.querySelectorAll('.column');
 
 // Coloring logic
 for (let i = 0; i < selected.length; i++) {

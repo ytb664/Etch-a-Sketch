@@ -27,7 +27,7 @@ body {
 }
 
 .column {
-    height: 20px;
+    height: auto;
     width: 20px;
     box-sizing: border-box;
     flex-grow: 1;

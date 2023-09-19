@@ -7,10 +7,12 @@ body {
 }
 
 .btn {
-    width: 320px;
+    width: 395px;
 }
 
 .container {
+    height: 395px;
+    width: 395px;
     display: flex;
     flex-flow: column wrap;
     gap: 5px;

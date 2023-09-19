@@ -7,11 +7,7 @@ btn.classList.add('btn');
 btn.textContent = "Click to Change Grid Number";
 body.insertBefore(btn, container);
 
-createGrid(25);
-
-btn.addEventListener('click', () => {
-
-})
+createGrid(prompt());
 
 // Create the box
 function createGrid(gridNumber) {

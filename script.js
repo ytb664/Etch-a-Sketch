@@ -18,6 +18,6 @@ const selected = document.querySelectorAll('.column');
 
 for (let i = 0; i < selected.length; i++) {
     selected[i].addEventListener('mouseover', () => {
-        selected[i].classList.toggle('colored');
+        selected[i].classList.add('colored');
     })
 }

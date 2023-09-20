@@ -26,19 +26,30 @@ function createGrid(gridNumber) {
     }
 }
 
-const selected = document.querySelectorAll('.column');
-
-// Coloring logic
-for (let i = 0; i < selected.length; i++) {
-    selected[i].addEventListener('mouseover', () => {
-        selected[i].classList.add('colored');
-    })
-}
-
 btn.addEventListener('click', () => {
     
     const theRow = document.querySelectorAll('.row');
     for (let i = 0; i < theRow.length; i++) {
         theRow[i].remove();
     }
+
+    createGrid(60);
+
+    const selected = document.querySelectorAll('.column');
+    for (let i = 0; i < selected.length; i++) {
+        selected[i].addEventListener('mouseover', () => {
+            selected[i].classList.add('colored');
+        })
+    }
 })
+
+const selected = document.querySelectorAll('.column');
+
+// Coloring logic
+function colorLogic() {
+    for (let i = 0; i < selected.length; i++) {
+        selected[i].addEventListener('mouseover', () => {
+            selected[i].classList.add('colored');
+        })
+    }
+}

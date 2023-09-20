@@ -35,18 +35,24 @@ btn.addEventListener('click', () => {
 
     createGrid(60);
 
-    const selected = document.querySelectorAll('.column');
-    for (let i = 0; i < selected.length; i++) {
-        selected[i].addEventListener('mouseover', () => {
-            selected[i].classList.add('colored');
-        })
-    }
+    // const selected = document.querySelectorAll('.column');
+    // for (let i = 0; i < selected.length; i++) {
+    //     selected[i].addEventListener('mouseover', () => {
+    //         selected[i].classList.add('colored');
+    //     })
+    // }
+    colorLogic();
 })
 
-const selected = document.querySelectorAll('.column');
+colorLogic();
+
+// const selected = document.querySelectorAll('.column');
 
 // Coloring logic
 function colorLogic() {
+
+    const selected = document.querySelectorAll('.column');
+
     for (let i = 0; i < selected.length; i++) {
         selected[i].addEventListener('mouseover', () => {
             selected[i].classList.add('colored');

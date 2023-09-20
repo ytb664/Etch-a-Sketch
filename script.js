@@ -34,7 +34,14 @@ btn.addEventListener('click', () => {
         theRow[i].remove();
     }
 
-    createGrid(prompt());
+    let newSize = -1;
+    while (newSize < 0 || newSize > 100) {
+        newSize = prompt();
+        if (newSize === null) {
+            newSize = 16;
+        }
+    }
+    createGrid(newSize);
     colorLogic();
 })
 

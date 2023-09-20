@@ -1,14 +1,21 @@
 const body = document.querySelector('body');
 const container = document.querySelector('.container');
 const btn = document.createElement('button');
+const colorButton = document.createElement('button');
 
-// Insert button
-btn.classList.add('btn');
+// Run functions
+createGrid(16);
+colorLogic();
+
+// Insert grid size button
+btn.classList.add('grid-button');
 btn.textContent = "Click to Change Grid Number";
 body.insertBefore(btn, container);
 
-createGrid(16);
-colorLogic();
+// Insert random color button
+colorButton.classList.add('random-color-button');
+colorButton.textContent = "Click to random the color";
+body.appendChild(colorButton);
 
 // Create the box
 function createGrid(gridNumber) {
@@ -27,6 +34,7 @@ function createGrid(gridNumber) {
     }
 }
 
+// Change grid size button
 btn.addEventListener('click', () => {
     
     const theRow = document.querySelectorAll('.row');
@@ -53,6 +61,24 @@ function colorLogic() {
     for (let i = 0; i < selected.length; i++) {
         selected[i].addEventListener('mouseover', () => {
             selected[i].classList.add('colored');
+        })
+    }
+}
+
+// Random color logic
+function randomColorLogic() {
+
+    const selected = document.querySelectorAll('.column');
+
+    for (let i = 0; i < selected.length; i++) {
+        selected[i].addEventListener('mouseover', () => {
+            
+            let randomRed = Math.round(Math.random() * 255);
+            let randomGreen = Math.round(Math.random() * 255);
+            let randomBlue = Math.round(Math.random() * 255);
+
+            selected[i].style.backgroundColor = `rgb(${randomRed},
+                ${randomGreen}, ${randomBlue})`;
         })
     }
 }

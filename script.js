@@ -13,7 +13,6 @@ btn.textContent = "Click to Change Grid Number";
 body.insertBefore(btn, container);
 
 // Insert random color button
-colorButton.classList.add('random-color-button');
 colorButton.textContent = "Click to random the color";
 body.appendChild(colorButton);
 
@@ -53,6 +52,15 @@ btn.addEventListener('click', () => {
     colorLogic();
 })
 
+// Random color button
+colorButton.addEventListener('click', () => {
+    const selected = document.querySelectorAll('.column');
+
+    for (let i = 0; i < selected.length; i++) {
+        selected[i].classList.toggle('random-color');
+    }
+});
+
 // Coloring logic
 function colorLogic() {
 
@@ -60,25 +68,19 @@ function colorLogic() {
 
     for (let i = 0; i < selected.length; i++) {
         selected[i].addEventListener('mouseover', () => {
-            selected[i].classList.add('colored');
-        })
-    }
-}
 
-// Random color logic
-function randomColorLogic() {
+            if (selected[i].classList.contains('random-color')) {
 
-    const selected = document.querySelectorAll('.column');
+                let randomRed = Math.round(Math.random() * 255);
+                let randomGreen = Math.round(Math.random() * 255);
+                let randomBlue = Math.round(Math.random() * 255);
 
-    for (let i = 0; i < selected.length; i++) {
-        selected[i].addEventListener('mouseover', () => {
-            
-            let randomRed = Math.round(Math.random() * 255);
-            let randomGreen = Math.round(Math.random() * 255);
-            let randomBlue = Math.round(Math.random() * 255);
-
-            selected[i].style.backgroundColor = `rgb(${randomRed},
-                ${randomGreen}, ${randomBlue})`;
-        })
+                selected[i].style.backgroundColor = `rgb(${randomRed},
+                    ${randomGreen}, ${randomBlue})`;
+            } else {
+                
+                selected[i].style.backgroundColor = 'black';
+            }
+        });
     }
 }

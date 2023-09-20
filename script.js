@@ -8,6 +8,7 @@ btn.textContent = "Click to Change Grid Number";
 body.insertBefore(btn, container);
 
 createGrid(16);
+colorLogic();
 
 // Create the box
 function createGrid(gridNumber) {
@@ -33,20 +34,9 @@ btn.addEventListener('click', () => {
         theRow[i].remove();
     }
 
-    createGrid(60);
-
-    // const selected = document.querySelectorAll('.column');
-    // for (let i = 0; i < selected.length; i++) {
-    //     selected[i].addEventListener('mouseover', () => {
-    //         selected[i].classList.add('colored');
-    //     })
-    // }
+    createGrid(prompt());
     colorLogic();
 })
-
-colorLogic();
-
-// const selected = document.querySelectorAll('.column');
 
 // Coloring logic
 function colorLogic() {

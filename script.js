@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const container = document.querySelector('.container');
+const container = document.createElement('div');
 const btn = document.createElement('button');
 const colorButton = document.createElement('button');
 
@@ -10,7 +10,11 @@ colorLogic();
 // Insert grid size button
 btn.classList.add('grid-button');
 btn.textContent = "Click to Change Grid Number";
-body.insertBefore(btn, container);
+body.appendChild(btn);
+
+// Create container
+container.classList.add('container');
+body.appendChild(container);
 
 // Insert random color button
 colorButton.textContent = "Click to random the color";
